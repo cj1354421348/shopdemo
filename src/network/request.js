@@ -7,7 +7,7 @@ export function request(config){
     //请求拦截
     instance.interceptors.request.use((config)=>{
         //设置认证
-        
+    
     return config
     },err=>{
     })
