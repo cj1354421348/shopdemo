@@ -59,6 +59,7 @@ methods:{
 
 <style scoped lang="scss">
     .tab-control{
+        z-index: 10;
         display: flex;
         height: 40px;
         line-height: 40px;

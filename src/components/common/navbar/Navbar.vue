@@ -48,6 +48,7 @@ methods:{
 
 <style scoped>
 .nav-bar {
+  z-index: 10;
   display: flex;
   background-color: var(--color-tint);
   color: rgb(255, 255, 255);

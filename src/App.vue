@@ -32,6 +32,7 @@
 }
 
 #nav {
+  z-index: 10;
 background-color: #e0e0e0;
 display: flex;
 position: fixed;
