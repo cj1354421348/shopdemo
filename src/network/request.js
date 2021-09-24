@@ -21,7 +21,7 @@ export function request(config){
         return res
     },err=>{
 
-        if(err.response.status=='401'){
+       if(err.response.status=='401'){
             Toast.fail('先登录')
             router.push({path:'/login'})
         }

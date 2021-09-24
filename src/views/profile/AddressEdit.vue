@@ -45,11 +45,10 @@ export default {
       addressId: "",
       title: "",
     });
-    const onDelete = ()=>{
-        DeleteAddress(state.addressId).then(res=>{
-            console.log(res);
-        })
-    }
+    const onDelete = () => {
+      const { type, addressId } = route.query;
+      DeleteAddress(addressId).then((res) => {});
+    };
     const onSave = (content) => {
       const params = {
         name: content.name,
@@ -61,7 +60,7 @@ export default {
         is_default: content.isDefault ? 1 : 0, // 判断是否为默认地址
       };
       if (state.type == "edit") {
-        EditAddress(state.addressId,params).then((res) => {
+        EditAddress(state.addressId, params).then((res) => {
           if (res.status == "201") {
             Toast("更改成功");
           }
@@ -78,7 +77,7 @@ export default {
     onMounted(() => {
       const { type, addressId } = route.query;
       state.type = type;
-      state.addressInfo = addressId;
+      state.addressId = addressId;
       if (type == "edit") {
         getAddressDetail(addressId).then((res) => {
           console.log(res);
@@ -105,7 +104,7 @@ export default {
       areaList,
       onSave,
       title,
-      onDelete
+      onDelete,
     };
   },
 
