@@ -9,7 +9,7 @@ import GoodListitem from "./GoodListitem";
 export default {
     setup(props){
         onUpdated(()=>{
-             console.log(props.goods)
+             //console.log(props.goods)
         });
     },
     props:{
