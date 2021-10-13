@@ -2,7 +2,7 @@
 <div class="recommend">
 <div class="recommd-item" v-for="item in recommds.slice(0,4) " :key="item.id">
     <a href="" @click.prevent="goD(item.id)">
-        <img v-lazy="item.cover_url" alt="">
+        <img :src="item.cover_url" alt="">
         <div>{{item.title}}</div>
     </a>
 </div>

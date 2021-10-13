@@ -182,7 +182,7 @@ export default {
         Toast.fail("请选择商品");
         return;
       } else {
-        router.push({ path: "/" });
+        router.push({ path: "/CreateOrder" });
       }
     };
     return {

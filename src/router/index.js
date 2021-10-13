@@ -11,6 +11,9 @@ const retister = () => import('../views/profile/retister');
 const login = () => import("../views/profile/login");
 const Address = ()=>import("../views/profile/Address")
 const AddressEdit = ()=>import("../views/profile/AddressEdit")
+const CreateOrder = ()=>import("../views/order/CreateOrder")
+const order = ()=>import("../views/order/order")
+const orderdetail = ()=>import("../views/order/orderdetail")
 const routes = [
   {
     path: '/',
@@ -95,10 +98,38 @@ const routes = [
     component: AddressEdit,
     meta: {
       title: '地址编辑',
-      //isAuthRequired: true,
+      isAuthRequired: true,
     }
   },
 
+  {
+    path: '/CreateOrder',
+    name: 'CreateOrder',
+    component: CreateOrder,
+    meta: {
+      title: '结算',
+      isAuthRequired: true,
+    }
+  },
+  
+  {
+    path: '/order',
+    name: 'order',
+    component: order,
+    meta: {
+      title: '订单列表',
+      isAuthRequired: true,
+    }
+  },
+  {
+    path: '/orderdetail',
+    name: 'orderdetail',
+    component: orderdetail,
+    meta: {
+      title: '订单详情',
+      isAuthRequired: true,
+    }
+  },
 
 
 

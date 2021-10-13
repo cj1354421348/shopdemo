@@ -22,9 +22,9 @@ export function EditAddress(address, params) {
 
 
 
-export function DeleteAddress(id) {
+export function DeleteAddress(cc) {
   return request({
-    url: `/api/address/${id}`,
+    url: `/api/address/${cc}`,
     method: 'delete',
   });
 }
