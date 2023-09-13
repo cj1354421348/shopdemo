@@ -24,8 +24,7 @@ jobs:
       - name: Build   # 安装依赖、打包，如果提前已打包好无需这一步
         run: |
           npm run build 
-      - name: Create Release Pull Request
-        uses: changesets/action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+    - name: LS
+        run: ls 
+    - name: Zip the Build
+      run: zip -r ${{ secrets.ReleaseZipName }} ./dist/ 
