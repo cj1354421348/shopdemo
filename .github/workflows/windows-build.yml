@@ -24,7 +24,4 @@ jobs:
       - name: Build   # 安装依赖、打包，如果提前已打包好无需这一步
         run: |
           npm run build 
-    - name: LS
-        run: ls 
-    - name: Zip the Build
-      run: zip -r ${{ secrets.ReleaseZipName }} ./dist/ 
+
