@@ -26,7 +26,7 @@
     </router-link>
     <router-link class="tab-bar-item" to="/profile">
       <div class="icon"><i class="iconfont icon-wode"></i></div>
-      <div>我的</div>
+      <div>我的123</div>
     </router-link>
   </div>
   <router-view />
